@@ -2,7 +2,7 @@ services:
   - type: web
     name: otp-bomber-api
     runtime: python
-    repo: https://github.com/providerbotz/OtpBomber
+    repo: https://github.com/providerbotz/otp-security
     plan: free
     region: singapore
     buildCommand: pip install -r requirements.txt
