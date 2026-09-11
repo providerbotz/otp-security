@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: otp-bomber-api
+    runtime: python
+    repo: https://github.com/providerbotz/OtpBomber
+    plan: free
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: RENDER
+        value: true
+    healthCheckPath: /
+    autoDeploy: true
